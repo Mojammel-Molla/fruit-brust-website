@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fruit Brust</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
   <!-- Tailwind and Daisyui -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,7 +28,7 @@
     <!-- Navbar section -->
     <div class="navbar justify-between md:flex-row-reverse lg:grid grid-cols-3 bg-[#F85559] rounded-full text-white">
       <div class="navbar-start md:w-[10%]">
-        <div class="dropdown">
+        <div class="dropdown sm:block md:block lg:hidden">
           <label tabindex="0" class="btn btn-ghost btn-circle">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -34,14 +36,24 @@
             </svg>
           </label>
           <ul tabindex="0"
-            class=" sm:menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black lg:flex justify-around">
+            class=" sm:menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black lg:hidden">
             <li><a>Home</a></li>
             <li><a>About Us</a></li>
             <li><a>Shop</a></li>
             <li><a>All Fruits</a></li>
           </ul>
         </div>
+        <div class="justify-start sm:hidden md:hidden text-black lg:block  ml-5">
+          <ul class="flex justify-around gap-10 w ">
+            <li><a>Home</a></li>
+            <li><a>AboutUs</a></li>
+            <li><a>Shop</a></li>
+            <li><a>AllFruits</a></li>
+          </ul>
+        </div>
+
       </div>
+
       <div class="navbar-center gap-3">
 
         <img src="./images/logo.png" alt="">
@@ -54,14 +66,9 @@
           <input type="text" placeholder="Search here"
             class="input input-bordered rounded-full h-10 max-w-xs ml-32 relative" />
           <span><i class="fa-solid fa-magnifying-glass text-black absolute top-20 right-96"></i></span>
-          <!-- <i class="fa-solid fa-magnifying-glass text-black absolute top-20 right-96"></i> -->
-
-
         </div>
       </div>
     </div>
-
-
 
     <!-- Hero section -->
     <div class="relative ">
@@ -281,7 +288,7 @@
                     <div>
                       <img src="./images/icons/Group 24.png" alt="">
                     </div>
-                    <div class="modal-action2">
+                    <div class="modal-action_3">
                       <!-- if there is a button in form, it will close the modal -->
                       <button class="btn text-[#F85559] bg-white">Close</button>
                       <button class="btn text-white bg-[#F85559]">Shop Now</button>
@@ -319,7 +326,7 @@
                       <div>
                         <img src="./images/icons/Group 24.png" alt="">
                       </div>
-                      <div class="modal-action3">
+                      <div class="modal-action_4">
                         <!-- if there is a button in form, it will close the modal -->
                         <button class="btn text-[#F85559] bg-white">Close</button>
                         <button class="btn text-white bg-[#F85559]">Shop Now</button>
@@ -331,17 +338,6 @@
 
 
                   </div>
-
-
-
-
-                  <div class="w-full text-center m-auto mt-12"><button
-                      class=" bg-[#F85559] text-white px-8 py-5 font-bold rounded-2xl w-36 ">Shop
-                      All</button>
-                  </div>
-
-
-
 
             </div>
           </div>
@@ -531,7 +527,7 @@
       </div>
       <h1 class="text-4xl font-extrabold">Fruit Brust</h1>
     </div>
-    <ul class="flex sm: flex-wrap gap-3 lg: gap-16 justify-center mb-20">
+    <ul class="flex sm: flex-wrap gap-3 md:gap-8 lg:gap-10 justify-center mb-20">
       <li>Home</li>
       <li>About Us</li>
       <li>Shop</li>
